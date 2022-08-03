@@ -1,0 +1,10 @@
+<form class="ui form" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+        <app-input label="To" inputType="text" class="" [control]="emailForm.controls['to']"></app-input>
+        <app-input label="From" inputType="text" class="" [control]="emailForm.controls['from']"></app-input>
+        <app-input label="Subject" inputType="text" class="" [control]="emailForm.controls['subject']"></app-input>
+        <app-input label="Content" controlType="textarea" [control]="emailForm.controls['text']"></app-input>
+        <button class="ui button primary">Send</button>
+</form>
+
+{{emailForm.value
+ | json}}
